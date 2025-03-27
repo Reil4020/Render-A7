@@ -6,6 +6,10 @@ from dash import dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
 
+# Initialize Dash app
+app = dash.Dash(__name__)
+server=app.server
+
 df = pd.read_csv('WorldCupData.csv', skiprows=1)
 df = df.dropna(subset=['Year'])#Remove top row
 
@@ -49,9 +53,7 @@ fig = px.choropleth(
     # title="World Cup Wins by Country (Red=Most, Blue=Least)"
 )
 
-# Initialize Dash app
-app = dash.Dash(__name__)
-server=app.server
+
 # Define app layout
 app.layout = html.Div([
     html.H1("FIFA World Cup Dashboard"),
