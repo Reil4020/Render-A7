@@ -1,5 +1,4 @@
-# Published at: [Include your Render link here]
-# Password: [Include password if applicable]
+# Published at:https://render-a7.onrender.com/
 
 import dash
 from dash import dcc, html, Input, Output
