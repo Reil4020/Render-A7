@@ -51,7 +51,7 @@ fig = px.choropleth(
 
 # Initialize Dash app
 app = dash.Dash(__name__)
-
+server=app.server
 # Define app layout
 app.layout = html.Div([
     html.H1("FIFA World Cup Dashboard"),
